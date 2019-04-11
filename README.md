@@ -3,7 +3,7 @@
 // metodo de listagem de carros                                                                                                          
 https://frota-v2-api.herokuapp.com/frotasV2/listaCarros
 
-//chamada para trazer o carro mais próximo ao cliente passando latitude e longitude via URL 
+//chamada para trazer o carro mais próximo ao cliente passando latitude e longitude via URL                                     
 https://frota-v2-api.herokuapp.com/frotasV2/buscarCliente?latitudeCliente=-23.589508&longitudeCliente=-46.634396
 
 // chamada para calcular a distancia do cliente e sua determinada viagem, retornar a kilometragem e o preço da viagem
