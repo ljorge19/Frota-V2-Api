@@ -1,12 +1,14 @@
 # Frota-V2-Api
 
 // metodo de listagem de carros
-
-http://localhost:8080/frotasV2/listaCarros
+https://frota-v2-api.herokuapp.com/frotasV2/listaCarros
 
 //chamada para trazer o carro mais próximo ao cliente passando latitude e longitude via URL 
+https://frota-v2-api.herokuapp.com/frotasV2/buscarCliente?latitudeCliente=-23.589508&longitudeCliente=-46.634396
 
-http://localhost:8080/frotasV2/viagem?latitudeCliente=-23.589508&longitudeCliente=-46.634396
+// chamada para calcular a distancia do cliente e sua determinada viagem, retornar a kilometragem e o preço da viagem
+https://frota-v2-api.herokuapp.com/frotasV2/viagem?latitudeCliente=-23.589508&longitudeCliente=-46.634396&latitudeViagem=-23.574165&longitudeViagem=-46.623248
+
 
 ***** coordenadas para teste ********
 
