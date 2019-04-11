@@ -7,7 +7,7 @@ public class CarroViagem {
 	private String placa;
 	private String latitude;
 	private String longitude;
-	private String status;
+	//private String status;
 	
 	public String getId() {
 		return id;
@@ -39,12 +39,12 @@ public class CarroViagem {
 	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
-	public String getStatus() {
+	/*public String getStatus() {
 		return status;
 	}
 	public void setStatus(String status) {
 		this.status = status;
-	}
+	}*/
 	
 	
 

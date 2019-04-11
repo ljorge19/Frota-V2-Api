@@ -39,8 +39,8 @@ public class CarrosController {
 		return new ResponseEntity<List<Carros>>(carros, HttpStatus.OK);
 	}
 
-	@GetMapping("/viagem")
-	public Viagem retornarViagem(@RequestParam double latitudeCliente, double longitudeCliente) {
+	@GetMapping("/buscarCliente")
+	public Viagem buscarCliente(@RequestParam double latitudeCliente,@RequestParam double longitudeCliente) {
 
 		boolean verificarCarro = false;
 		Viagem viagem = new Viagem();
@@ -61,7 +61,7 @@ public class CarrosController {
 				carroViagem.setPlaca(carro.getPlaca());
 				carroViagem.setLatitude(carro.getLatitude());
 				carroViagem.setLongitude(carro.getLongitude());
-				carroViagem.setStatus(carro.getStatus());
+				//carroViagem.setStatus(carro.getStatus());
 				
 				
 				double latitudeCarro = Double.parseDouble(carro.getLatitude());
@@ -105,6 +105,41 @@ public class CarrosController {
 			}
 		//}
 		
+
+		return viagem;
+	
+	}
+
+	@GetMapping("/viagem")
+	public Viagem viagem(@RequestParam double latitudeCliente,@RequestParam double longitudeCliente,
+			@RequestParam double latitudeViagem,@RequestParam double longitudeViagem) {
+
+		boolean verificarCarro = false;
+		Viagem viagem = new Viagem();
+		ArrayList<Distancia> listaDistancia = new ArrayList<Distancia>();
+		Distancia distancia;
+		List<Carros> carros = new ArrayList<>();
+		carros = tbCarrosRepository.findAll();
+
+		Double distanciaCalculada = distance(latitudeCliente, longitudeCliente, latitudeViagem, longitudeViagem, "K");
+		distancia = new Distancia();
+		// distancia.setCarroViagem(carroViagem);
+		distancia.setKm(distanciaCalculada);
+		viagem.setDistancia(distanciaCalculada);
+
+		if (distanciaCalculada > 1) {
+			viagem.setPreco(7);
+		} else if (distanciaCalculada > 3) {
+			viagem.setPreco(15);
+		} else if (distanciaCalculada > 5) {
+			viagem.setPreco(20);
+		} else if (distanciaCalculada > 10) {
+			viagem.setPreco(50);
+		} else if (distanciaCalculada > 20) {
+			viagem.setPreco(100);
+		} else if (distanciaCalculada > 30) {
+			viagem.setPreco(200);
+		}
 
 		return viagem;
 	}
