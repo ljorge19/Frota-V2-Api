@@ -41,7 +41,6 @@ coordenadas: -23.574165, -46.623248
 
 
 
-# Fundação para O Remédio Popular Furp Av. Prof. Noé Azevedo, 
-311 - Vila Mariana, São Paulo - SP, 04117-040
+# Fundação para O Remédio Popular Furp Av. Prof. Noé Azevedo, 311 - Vila Mariana, São Paulo - SP, 04117-040
 
 Coordenadas: -23.589508, -46.634396
