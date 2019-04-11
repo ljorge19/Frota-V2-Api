@@ -11,7 +11,7 @@ public class Carros {
 	private String ano;
 	private String placa;
 	private String cor;
-	private String nome_dono;
+	private String modelo;
 	private String longitude;
 	private String latitude;
 	private String status;
@@ -20,12 +20,12 @@ public class Carros {
 		super();
 	}
 
-	public Carros(String ano, String placa, String cor,String nome_dono, String longitude, String latitude, String status) {
+	public Carros(String ano, String placa, String cor,String modelo, String longitude, String latitude, String status) {
 		super();
 		this.ano = ano;
 		this.placa = placa;
 		this.cor = cor;
-		this.nome_dono = nome_dono;
+		this.modelo = modelo;
 		this.longitude = longitude;
 		this.latitude = latitude;
 		this.status = status;
@@ -63,12 +63,12 @@ public class Carros {
 		this.cor = cor;
 	}
 
-	public String getNome_dono() {
-		return nome_dono;
+	public String getmodelo() {
+		return modelo;
 	}
 
-	public void setNome_dono(String nome_dono) {
-		this.nome_dono = nome_dono;
+	public void setmodelo(String modelo) {
+		this.modelo = modelo;
 	}
 
 	public String getLongitude() {
@@ -97,7 +97,7 @@ public class Carros {
 
 	@Override
 	public String toString() {
-		return "Carros [id=" + id + ", ano=" + ano + ", placa=" + placa + ", cor=" + cor + ", nome_dono=" + nome_dono
+		return "Carros [id=" + id + ", ano=" + ano + ", placa=" + placa + ", cor=" + cor + ", modelo=" + modelo
 				+ ", longitude=" + longitude + ", latitude=" + latitude + ", status=" + status + "]";
 	}
 }

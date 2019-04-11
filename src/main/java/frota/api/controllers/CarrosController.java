@@ -61,6 +61,7 @@ public class CarrosController {
 				carroViagem.setPlaca(carro.getPlaca());
 				carroViagem.setLatitude(carro.getLatitude());
 				carroViagem.setLongitude(carro.getLongitude());
+				carroViagem.setModelo(carro.getmodelo());
 				//carroViagem.setStatus(carro.getStatus());
 				
 				
